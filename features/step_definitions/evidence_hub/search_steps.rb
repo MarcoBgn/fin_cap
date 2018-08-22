@@ -78,6 +78,18 @@ Then('I should see no filters checked') do
   expect(evidence_summaries_page.older_people_filter.checked?).to be_falsey
 end
 
+Then("I should see the {string} {string} filter checked") do |filter_group, value|
+  filter_fieldset = evidence_summaries_page.search_filters.select do |filter|
+    filter.title.text == filter_group
+  end.first
+
+  filter = filter_fieldset.filter_input.select do |label|
+    label.input.value == value
+  end.first
+
+  expect(filter.input.checked?).to be_truthy
+end
+
 Then('I should see the keyword field cleared') do
   expect(evidence_summaries_page.keyword.value).to eq('')
 end

@@ -105,14 +105,17 @@ class EvidenceSummaryPresenter < BasePresenter
   end
 
   def client_group_filter_params(value)
+    puts "\n----\n in client_groups: #{value} \n-----\n"
     search_form_params('client_groups' => [value])
   end
 
   def topic_filter_params(value)
+    puts "\n----\n in topics: #{value} \n-----\n"
     search_form_params('topics' => [value])
   end
 
   def measured_outcome_filter_params(value)
+    puts "\n----\n in measured_outcomes: #{value} \n-----\n"
     search_form_params('measured_outcomes' => [value])
   end
 

@@ -4,6 +4,7 @@
   </h5>
   <ul class="sidepanel__list">
     <% evidence_summary.stripped_topics.each do |topic| %>
+    <h2><%= topic %></h2>
       <li class="sidepanel__list-item">
         <%= link_to topic,
             evidence_hub_index_path(

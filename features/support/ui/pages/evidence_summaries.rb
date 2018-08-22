@@ -18,6 +18,15 @@ module UI::Pages
       element :value_for_money, '.data-types__value-for-money svg'
     end
 
+    class FilterInput < SitePrism::Section
+      element :input, 'input'
+    end
+
+    class SearchFilter < SitePrism::Section
+      element :title, 'legend'
+      sections :filter_input, FilterInput, 'label'
+    end
+
     set_url '{/locale}/evidence_hub'
 
     # pagination elements
@@ -43,5 +52,6 @@ module UI::Pages
             '.evidence-hub__thematic-review-message a'
 
     sections :search_results, SearchResult, '.search-results__item'
+    sections :search_filters, SearchFilter, '.sidepanel__filters-inner .sidepanel__fieldset'
   end
 end

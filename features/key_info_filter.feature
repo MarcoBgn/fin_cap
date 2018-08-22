@@ -22,6 +22,7 @@ Feature: Evidence Summary Page: Key Info filters
       | topics              | Credit Use and Debt                                                |
       | countries           | England                                                            |
       | year of publication | 2017                                                               |
+    And I should see the "Client group" "Over-indebted people" filter checked
   
   Scenario: Topic
     Given I entered into the "Review" page "Raising household saving"
@@ -42,6 +43,7 @@ Feature: Evidence Summary Page: Key Info filters
       | topics              | Topics: Saving, Pensions and Retirement Planning, Financial Education |
       | countries           | International review                                                  |
       | year of publication | 2012                                                                  |
+    And I should see the "Topic" "Saving" filter checked
 
   Scenario: Measured Outcome
     Given I entered into the "Evaluation" page "Looking after the pennies"
