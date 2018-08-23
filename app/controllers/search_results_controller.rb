@@ -13,10 +13,8 @@ class SearchResultsController < ApplicationController
       }
     ).results
 
-    if @search_results.any?
-      render 'index_with_results'
-    else
-      render 'index_no_results'
-    end
+    return render('index_with_results') if @search_results.any?
+
+    render('index_no_results')
   end
 end
