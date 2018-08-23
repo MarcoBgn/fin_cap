@@ -26,3 +26,4 @@ RSpec.describe 'Previewing documents', type: :request do
     end
   end
 end
+  
