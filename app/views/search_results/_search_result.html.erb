@@ -1,0 +1,9 @@
+<% present(search_result, SearchResultPresenter) do |search_result| %>
+ <li class="search-results__item" data-dough-search-results-item>
+   <h2 class="search-results__heading">
+     <%= link_to search_result.title.html_safe, search_result.link %>
+   </h2>
+
+   <p><%= search_result.description %></p>
+ </li>
+<% end %>

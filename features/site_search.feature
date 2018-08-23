@@ -7,10 +7,10 @@ Feature: Site search
     Given I entered into the Homepage
 
   Scenario: Search a topic on the top search bar
-    When I search the query "Young" on top bar
+    When I search the query "the employee view" on top bar
     Then I should see the search results
-      | title        |
-      | Young Adults |
+      | title                                   |
+      | Financial well-being: the employee view |
 
   Scenario: Search a topic on the bottom search bar
     When I search the query "well-being" on bottom bar

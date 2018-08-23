@@ -32,12 +32,14 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'pry-rails'
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.54.0', require: false
   gem 'site_prism'
   gem 'sqlite3'
   gem 'tzinfo-data'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
