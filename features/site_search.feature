@@ -19,3 +19,15 @@ Feature: Site search
       | Financial well-being: the employee view |
       | Financial Capability                    |
       | UK Strategy                             |
+
+  Scenario: Search with paginated results
+    When I search the query "lifestage" on top bar
+    Then I should see "10" results
+    And I should see the search results
+      | title                     |
+      | Young Adults              |
+      | Working Age Adults        |
+      | People trying to save     |
+      | People planning to retire |
+    And I should be on page "1" of "2" of the search results
+    And I should not see the previous button

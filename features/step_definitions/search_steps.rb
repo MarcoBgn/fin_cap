@@ -20,3 +20,7 @@ Then('I should be on the search results page') do
   expect(page.current_path).to eq('/en/search')
 end
 
+Then('I should see {string} results') do |results_size|
+  expect(search_results_page.results.size).to be(results_size.to_i)
+end
+
